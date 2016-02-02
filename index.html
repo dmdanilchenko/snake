@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Змейка</title>
+		<meta charset="utf-8">
+		<style type='text/css'>
+			<!-- li>ul{
+				display:none;
+			}
+			body, html{
+				height:100%;
+			} -->
+			#field{
+				height:400px;
+				width:400px;
+				background:RGB(249, 201, 16);
+				position:relative;
+			}
+			
+			#pause{
+				height:140px;
+				width:100px;
+				background:RGB(249, 201, 16);
+				position:absolute;
+				z-index:3000;
+				left:148px;
+				top:128px;
+				display:none;
+			}
+			#pause>p{
+				font-size:104px;
+				margin:0px 0px 0px 17px;
+			}
+			
+			.thereIsSnake{
+				background:RGB(200, 50, 12);
+			}
+			
+			.thereIsFood{
+				background:RGB(3, 3, 3);
+			}
+			
+			div>div{
+				height:38px;
+				width:38px;
+				float: left;
+				border: 1px solid black;
+				background:RGB(50, 150, 60);
+			}
+			
+			#info{
+				height:40px;
+				width:400px;
+				background:RGB(249, 201, 16);
+			}
+			
+			#buttons{
+				height:40px;
+				width:400px;
+				background:RGB(249, 201, 16);
+			}
+						
+			button{
+				margin:9px 0px 0px 7px;
+				<!-- background:RGB(249, 201, 16); -->
+			}
+			div>p{
+				float: left;
+				margin:11px 10px 0px 10px;
+			}
+		</style> 
+	</head>
+	<body>
+		<div id='info'>
+			<p>SCORE: 0</p><p>SNAKE LENGTH: 0</p><p>SPEED: 0</p>
+		</div>	
+		<div id='field'>
+			<div id='pause'><p>| |</p></div>
+		</div>
+		<div id='buttons'>
+			<button id='bStart'>START</button>
+			<button id='bPause'>PAUSE</button>
+		</div>		
+		<script type="text/javascript" src="script.js"></script> 
+	</body>
+ <html>
