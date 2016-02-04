@@ -18,9 +18,10 @@ function newGame() {
 	paintFood();
 	startMoving(snake.speed);
 	inPause = false;
+	bPause.disabled = false;
 }
 
-//заполнием основное поле клеточками
+//ДД заполнием основное поле клеточками
 function newField() {
 	var field = document.getElementById('field');
 	field.innerHTML = '<div id="pause"><p>| |</p></div>';
@@ -33,8 +34,11 @@ function newField() {
 			field.appendChild(div);
 		}
 	}
+	
+	bPause.disabled = true;
 }
 
+//ДД останавливает игру
 function pauseMoving(){
 	
 	var paused = document.getElementById('pause');
@@ -48,6 +52,7 @@ function pauseMoving(){
 	inPause = !inPause;
 	
 }
+
 //ДД рисуем змейку по всем ее точкам
 function paintSnake() {
 
@@ -65,7 +70,7 @@ function gameOver() {
 	alert('Вы проиграли! Игра окончена');
 }
 
-//Дд еду рисуем случайным образом и даем ей какой то класс isFood
+//ДД еду рисуем случайным образом и даем ей какой то класс isFood
 function paintFood() {
 
 	do {
@@ -77,6 +82,7 @@ function paintFood() {
 	divForFood.classList.add("thereIsFood");
 }
 
+//ДД вспомагательная функция для получения случайного числа
 function randomInteger(min, max) {
 	var rand = min - 0.5 + Math.random() * (max - min + 1)
 		rand = Math.round(rand);
@@ -188,6 +194,7 @@ function Snake() {
 	}
 }
 
+//ДД останавливает движение
 function stopMoving() {
 	clearInterval(idInt);
 	idInt = 0;
